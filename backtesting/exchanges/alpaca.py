@@ -3,6 +3,7 @@ from secret import API_KEY, SECRET_KEY
 from alpaca_trade_api import TimeFrame
 import alpaca_trade_api as tradeapi
 import logging 
+from datetime import datetime
 
 logger = logging.getLogger()
 class AlpacaClient:
@@ -24,8 +25,16 @@ class AlpacaClient:
 
 
     def get_historical_data(self, symbol: str, start_time: Optional[int] = None, end_time: Optional[int] = None):
-        raw_candles = self._api.get_crypto_bars(symbol,TimeFrame.Minute,limit=1500, start = '2021-06-08').df
-        print(raw_candles)
+        raw_candles = self._api.get_crypto_bars(symbol,TimeFrame.Minute,limit=1500, start = '2021-06-08')
+        candles = []
+        if raw_candles is not None:
+            for bar in raw_candles:
+                candles.append((bar.t.date(), float(bar.o), float(bar.h), float(bar.l), float(bar.c), float(bar.v)))
+            print(candles[0])
+            return candles
+        else:
+            return None
+
 
 
 
