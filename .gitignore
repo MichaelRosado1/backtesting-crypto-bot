@@ -1,2 +1,4 @@
 /btenv
-
+secret.py
+.DS_Store
+info.log

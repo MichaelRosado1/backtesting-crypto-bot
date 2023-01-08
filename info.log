@@ -1,1 +1,11 @@
-2022-12-28 21:55:35,052 DEBUG ::this is a log
+2022-12-30 15:09:43,696 DEBUG ::Starting new HTTPS connection (1): fapi.binance.com:443
+2022-12-30 15:09:43,781 DEBUG ::https://fapi.binance.com:443 "GET /fapi/v3/historicalTrades HTTP/1.1" 451 224
+2022-12-30 15:09:43,784 ERROR ::Error while making request to /fapi/v3/historicalTrades: {'code': 0, 'msg': "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."}(status code = 451)
+2022-12-30 15:10:57,439 DEBUG ::Starting new HTTPS connection (1): fapi.binance.us.com:443
+2022-12-30 15:10:57,542 ERROR ::Connection error while making request to /fapi/v3/historicalTrades: HTTPSConnectionPool(host='fapi.binance.us.com', port=443): Max retries exceeded with url: /fapi/v3/historicalTrades (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10c8791b0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2022-12-30 20:43:09,530 DEBUG ::Starting new HTTPS connection (1): fapi.binance.us:443
+2022-12-30 20:43:09,574 ERROR ::Connection error while making request to /fapi/v3/historicalTrades: HTTPSConnectionPool(host='fapi.binance.us', port=443): Max retries exceeded with url: /fapi/v3/historicalTrades (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1043091b0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2022-12-30 20:44:02,304 DEBUG ::Starting new HTTPS connection (1): fapi.binance.us:443
+2022-12-30 20:44:02,305 ERROR ::Connection error while making request to /fapi/v3/historicalTrades: HTTPSConnectionPool(host='fapi.binance.us', port=443): Max retries exceeded with url: /fapi/v3/historicalTrades (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x101dea860>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2022-12-30 20:47:21,290 DEBUG ::Starting new HTTPS connection (1): fapi.binance.us:443
+2022-12-30 20:47:21,291 ERROR ::Connection error while making request to /fapi/v3/historicalTrades: HTTPSConnectionPool(host='fapi.binance.us', port=443): Max retries exceeded with url: /fapi/v3/historicalTrades (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1042651b0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
